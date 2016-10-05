@@ -21,8 +21,30 @@ Bridge의 대상이 되는 인터페이스의 경우 promisc 모드를 설정해
 # ./bridge -v -i netmap:igb0 -i netmap:igb1
 ```
 Bridge 실행시 네트워크 드라이버에 따라 다른 결과가 나온다. igb의 경우 바로 bridge 역할을 하지만 e1000의 경우 약 15분 이상 시간이 흐린뒤에 bridge 역할을 한다.
-
+ 
 # libuinet : multitool
 netmap을 이용하여 bridge를 연결하고, 원하는 데이터를 파일로 남기는 것이 가능한 오픈소스
 
+### Interface 설정
+ - netmap bridge와 동일하게 Promisc 모드 설정
 
+### 빌드 및 실행
+ - 빌드의 경우 제공되는 예제와 함께 Makefile이 제공된다.
+ - libuinet의 경우 gmake를 통해 make가 가능
+```sh
+#./multitool -n em2 -b em3 -n em3 -b em2 -X --listen 0.0.0.0:80 --content-type image/jpeg
+```
+multitool의 경우 netmap을 통해 bridge를 연결해주며, --content-type에 설정한 대상에 대해 파일로 데이터를 저장한다.
+
+ - content-type
+  - application/gzip           // .gz
+  - application/json"          // .json
+  - application/octet-stream   // .bin
+  - application/pdf            // .pdf
+  - application/zip            // .zip
+  - image/gif                  // .gif
+  - image/jpeg                 // .jpg
+  - image/png                  // .png
+  - text/html                  // .html
+  - text/plain                 // .txt
+  - text/xml                   // .xml
