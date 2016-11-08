@@ -1,3 +1,6 @@
+## IP Header 
+IP Header의 DSCP(Differentiated Service Code Point) 6비트의 DSCP는 각 처리 노드에서 해당 패킷에 대한 처리 방법을 정의하는 PHB를 선택할 때 사용
+
 # 통신을 끊기 위한 RST Packet 전송
 TCP Header의 Control Flags(6bit) 필드 값이 RST(Reset)로 설정되어있는 패킷을 생성하여, 서버와 클라이언트 측으로 전송한다.
 
