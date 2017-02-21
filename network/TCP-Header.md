@@ -19,7 +19,7 @@ Reset Paket을 전송하여 연결을 끊는 방법 이외에 서버측보다 �
 ### HTML meta data
 ```<html>
 <head>
-<meta http-equiv="refresh" content="0;url=http://192.168.100.95/privacycenter/msg/notice.jsp" />
+<meta http-equiv="refresh" content="0;url=http://www.naver.com" />
 </head>
 </html>
 ```
@@ -30,7 +30,7 @@ Reset Paket을 전송하여 연결을 끊는 방법 이외에 서버측보다 �
 <body>
 <script type="text/javascript">
    	// Javascript URL redirection
-    window.location.replace("http://www.mydomain.com/new-page.html");
+    window.location.replace("http://www.naver.com");
 </script>
 </body>
 </html>
