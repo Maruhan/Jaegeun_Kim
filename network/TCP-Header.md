@@ -12,3 +12,26 @@ RFC 4413 : TCP/IP Field Behavior
 https://www.rfc-editor.org/
 
 내용 추가는 다음에~
+
+
+
+Reset Paket을 전송하여 연결을 끊는 방법 이외에 서버측보다 빠르게 가짜 페이지를 전송해주는 방법 및 다른 URL로 redirect 시키는 방법
+### HTML meta data
+```<html>
+<head>
+<meta http-equiv="refresh" content="0;url=http://192.168.100.95/privacycenter/msg/notice.jsp" />
+</head>
+</html>
+```
+### HTML Javascript
+```
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+   	// Javascript URL redirection
+    window.location.replace("http://www.mydomain.com/new-page.html");
+</script>
+</body>
+</html>
+```
